@@ -23,8 +23,6 @@ When starting with Lastpass, you’ll need to create one very secure password to
 Now, you have the option to add sites manually, or the recommended option is to add passwords to your vault as you visit sites.  For example, we will create a new account on dropbox.com, which is a popular online file storage website.  After signing up and choosing your own password, a box will appear and ask if you want to save it to your Lastpass vault.
 
 <img src="http://infosecured.github.io/images/posts/addtolp.png" alt="Add a Password" class="inline"/>
-#![add](~/images/posts/addtolp.jpeg "Add a Password")
-
 This option makes it easier for you to add all of your future logins into Lastpass.  You should note though that this box will show up if you enter the incorrect password as well, so make sure you have successfully logged in to the target site before adding your password.  If you inadvertently add the incorrect password, you will be able to save the correct password on your next login attempt.  Now since I chose my own password, I’ve decided that I want to make it a more secure one.  So I’ve navigated to the Security section of dropbox.com and chose the option to change my password.  I’ve already entered my old password and in the new password box, I’ll be clicking on the Lastpass option in the password box as shown circled in red.
 
 When the Lastpass box comes up, expand the options at the bottom of the window.  Now, some websites will not allow you to choose all of these options and some other websites may have limits on the number of characters your password can be.  But when possible, I try to choose the longest password possible with uppercase, lowercase, numbers, and symbols. (Note, this is not my password).
