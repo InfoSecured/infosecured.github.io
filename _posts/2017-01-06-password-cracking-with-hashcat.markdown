@@ -11,6 +11,7 @@ For the following steps, you’ll need to download Hashcat.
 
 View the password hashes by typing the following in terminal:
 `tail -n 1 /etc/shadow`
+
 To determine the hashing algorithm used by the system, type the following:
 `grep -rn ENCRYPT_METHOD /etc/login.defs`
 Extract the Hash from the file /etc/shadow and create the Hash File. Replace “user to crack” with the username of the account you are trying to crack.
