@@ -1,6 +1,6 @@
 # Site settings
 title: InfoSecured
-description: 'Test'
+description: 'CyberBlog'
 url: 'http://infosecured.github.io'
 baseurl: '/'
 # google_analytics: 'UA-XXXXXX-X'
