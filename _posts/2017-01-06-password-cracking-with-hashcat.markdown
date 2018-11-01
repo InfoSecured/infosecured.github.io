@@ -23,26 +23,26 @@ For the following steps, you’ll need to download Hashcat.
 
 4. Next, you’ll have to determine whether you’re using a dictionary, rules or brute force attack.
 
-	### Dictionary
+### Dictionary
 
-		1. Download or create a password list. You should be able to find one easily using Google or you can create your own.
+1. Download or create a password list. You should be able to find one easily using Google or you can create your own.
 
-		2. Run Hashcat with the following command.  Note: The 1800 signifies that the hash type that you are cracking is sha512crypt $6$, SHA512(Unix).  If your hash type is different, you’ll want to run hashcat –help and search the list for your hash type.  You can also grep this information (i.e. hashcat –help \| grep ntlm).
+2. Run Hashcat with the following command.  Note: The 1800 signifies that the hash type that you are cracking is sha512crypt $6$, SHA512(Unix).  If your hash type is different, you’ll want to run hashcat –help and search the list for your hash type.  You can also grep this information (i.e. hashcat –help \| grep ntlm).
 
-		`hashcat -m 1800 -a 0 -o cracked.txt password.hash dictionaryfile.txt`
+	`hashcat -m 1800 -a 0 -o cracked.txt password.hash dictionaryfile.txt`
 
-	### Brute Force
+### Brute Force
 
-		1. Run Hashcat with the following command: Note that the brute-force method can be altered for specific combinations.  This method will take a long time.
+1. Run Hashcat with the following command: Note that the brute-force method can be altered for specific combinations.  This method will take a long time.
 
-			`hashcat -m 1800 -a 3 -o cracked.txt password.hash ?a?a?a?a?a?a?a?a`
+	`hashcat -m 1800 -a 3 -o cracked.txt password.hash ?a?a?a?a?a?a?a?a`
 
-	### Rules (This way worked really well for me)
+### Rules (This way worked really well for me)
 
-		1. In the rules sub-folder are numerous sets of rules to try.  You can also search Google for more rules.  In addition, you can open the rules file in a text editor, you can view the different types of iterations that are performed against each word in your dictionary file.
+1. In the rules sub-folder are numerous sets of rules to try.  You can also search Google for more rules.  In addition, you can open the rules file in a text editor, you can view the different types of iterations that are performed against each word in your dictionary file.
 
-		2. Run Hashcat with the following command (replacing the appropriate filenames).
+2. Run Hashcat with the following command (replacing the appropriate filenames).
 
-			`hashcat -m 1800 -a 1 -o cracked.txt -r rule.file password.hash dictionaryfile.txt`
+	`hashcat -m 1800 -a 1 -o cracked.txt -r rule.file password.hash dictionaryfile.txt`
 
 This guide should be a basic start to password cracking with Hashcat.  As you get comfortable using a method like this, you can expand upon it by adding multiple dictionaries and more password iterations.
