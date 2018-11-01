@@ -28,6 +28,8 @@ This option makes it easier for you to add all of your future logins into Lastpa
 
 When the Lastpass box comes up, expand the options at the bottom of the window.  Now, some websites will not allow you to choose all of these options and some other websites may have limits on the number of characters your password can be.  But when possible, I try to choose the longest password possible with uppercase, lowercase, numbers, and symbols. (Note, this is not my password).
 
+![generate](/images/posts/generate.png "Generate a Password")
+
 Lastpass offers some other great security tools which can help you to further secure your passwords.  The first tool that I would highly recommend using is two-factor authentication (2FA).  2FA will add a second measure of security to your vault which is a 6-8 digit passcode that changes every 30-60 seconds.  You can utilize your smart phone as your second factor if you choose by downloading the Lastpass or Google Authenticator.  When choosing this option, Lastpass will guide you through setup process which will involve using your phone’s camera to take a picture of a QR code.
 
 Another great feature is the Security Challenge. This feature tests the strength of all of your passwords and makes recommendations on which ones are weak or even potentially compromised.  With some websites such as Google and Amazon, Lastpass can even change your password to a more secure one for you.
