@@ -9,21 +9,21 @@ Weak passwords are a very easy way for a hacker to gain access to your systems. 
 
 For the following steps, you’ll need to download Hashcat.
 
-View the password hashes by typing the following in terminal:
+1. View the password hashes by typing the following in terminal:
 
 `tail -n 1 /etc/shadow`
 
-To determine the hashing algorithm used by the system, type the following:
+2. To determine the hashing algorithm used by the system, type the following:
 
 `grep -rn ENCRYPT_METHOD /etc/login.defs`
 
-Extract the Hash from the file /etc/shadow and create the Hash File. Replace “user to crack” with the username of the account you are trying to crack.
+3. Extract the Hash from the file /etc/shadow and create the Hash File. Replace “user to crack” with the username of the account you are trying to crack.
 
 `tail /etc/shadow | grep "user to crack" | awk  -F':' '{print $2}' >> password.hash`
 
-Next, you’ll have to determine whether you’re using a dictionary, rules or brute force attack.
+4. Next, you’ll have to determine whether you’re using a dictionary, rules or brute force attack.
 
-### Dictionary
+> ### Dictionary
 
 Download or create a password list. You should be able to find one easily using Google or you can create your own.
 
