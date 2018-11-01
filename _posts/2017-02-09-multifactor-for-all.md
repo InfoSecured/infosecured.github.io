@@ -5,7 +5,6 @@ categories: [Account Security]
 tags: [MFA, 2FA]
 ---
 
-
 Multi-factor authentication is used repeatedly on a daily basis by most people who don’t even know that they are using it.  The act of authentication is used to establish your identity to someone or something.  Authentication is based upon three factors: something you know, something you have, and something you are.  Using those three simple factors, the identity of an individual can be securely determined while preventing or reducing fraud.  However, with technology that never stops advancing and businesses moving more and more towards paperless environments, identity theft and security vulnerabilities will always be a concern.  In fact, identity theft and cyber-crime are expected to become more prevalent and poor economic performance is only projected to spur the trend. (Siciliano, 2010)  As a result, authentication will have to continuously evolve to stay ahead of changing technology and security risks.
 
 Multi-factor authentication is often referred to as two-factor authentication, meaning that at least two of the three factors of authentication are used.  People use multi-factor authentication every time that they use an ATM at a bank, purchase something with their debit card or log onto a computer at work especially when they are accessing highly sensitive data.  Most businesses, however, are only using single factor authentication which amounts to a username and password.  It’s more time consuming and in some cases more expensive to use multi-factor authentication (issuing key fobs or cards), but one cannot deny the advantage of using more than one factor: a much higher degree of security.
@@ -35,21 +34,22 @@ While some organizations are already using multi-factor authentication, more and
 As technology gets smarter and society moves more towards a paperless environment, our information becomes more at risk.  Those committing cyber-crimes wouldn’t be very effective if they sat idle while technology advanced around them.  Because criminals are unlikely to let up on their attempts to scam people or steal their information, security in the form of multi-factor authentication will continue to be a very important aspect of everyone’s lives.  It will have to continuously evolve to keep up, or better yet, keep ahead of criminals.  Security is a proactive job; it is not only the responsibility of a business to protect an individual’s information from theft, but also that of the individual to make sure that they are proactive in the protection of their own information.  Businesses must make discerning choices about who they allow to store their information and insist that it is protected by security that includes multi-factor authentication.
 
 Product Links
-https://www.duo.com
 
-https://www.lastpass.com
+<https://www.duo.com>
 
-https://www.rsa.com/en-us/products/rsa-securid-suite
+<https://www.lastpass.com>
+
+<https://www.rsa.com/en-us/products/rsa-securid-suite>
 
 References
-Apostille US. (2007, November 14). Biometric Signature Authentication for the Information Age. Retrieved March 18, 2010, from Apostille.us: http://apostille.us/news/biometric_signature_authentication_for_the_information_age_.shtml
+Apostille US. (2007, November 14). _Biometric Signature Authentication for the Information Age._ Retrieved March 18, 2010, from Apostille.us: <http://apostille.us/news/biometric_signature_authentication_for_the_information_age_.shtml>
 
-Beal, V. (2010, January 8). How Fingerprint Scanners Work. Retrieved March 20, 2010, from Internet.com: http://www.webopedia.com/DidYouKnow/Computer_Science/2004/fingerprint.asp
+Beal, V. (2010, January 8). _How Fingerprint Scanners Work._ Retrieved March 20, 2010, from Internet.com: <http://www.webopedia.com/DidYouKnow/Computer_Science/2004/fingerprint.asp>
 
-Cavalli, E. (2008, June 27). Blizzard Announces Account Security Token. Retrieved March 23, 2010, from Wired: http://www.wired.com/gamelife/2008/06/blizzard-announ/
+Cavalli, E. (2008, June 27). _Blizzard Announces Account Security Token._ Retrieved March 23, 2010, from Wired: <http://www.wired.com/gamelife/2008/06/blizzard-announ/>
 
-Dong-hun, L. (n.d.). Biometrics, as a New Technology. Retrieved March 19, 2010, from Theory & Critique: http://maincc.hufs.ac.kr/~argus/no343/t_c2.htm
+Dong-hun, L. (n.d.). _Biometrics, as a New Technology._ Retrieved March 19, 2010, from Theory & Critique: <http://maincc.hufs.ac.kr/~argus/no343/t_c2.htm>
 
-Guhl, A. (2008, August 25). The Benefits of Multi-Factor Authentication. Retrieved March 18, 2010, from EzineArticles: http://ezinearticles.com/?The-Benefits-of-Multi-Factor-Authentication&id=1439662
+Guhl, A. (2008, August 25). _The Benefits of Multi-Factor Authentication._ Retrieved March 18, 2010, from EzineArticles: <http://ezinearticles.com/?The-Benefits-of-Multi-Factor-Authentication&id=1439662>
 
-Siciliano, I. a. (2010, January 5). Recession to Cause a Rise in Scams, Thievery and Hacking. Retrieved March 25, 2010, from ITRC: http://www.idtheftcenter.org/artman2/publish/headlines/2010_Trends.shtml
+Siciliano, I. a. (2010, January 5). _Recession to Cause a Rise in Scams, Thievery and Hacking._ Retrieved March 25, 2010, from ITRC: <http://www.idtheftcenter.org/artman2/publish/headlines/2010_Trends.shtml>
