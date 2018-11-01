@@ -1,0 +1,12 @@
+# General Jekyll Config
+highlighter: rogue
+name: InfoSecured
+description: Test
+url: "http://infosecured.github.io/"
+lsi: false
+
+exclude:[LICENSE, CNAME, README.md, .gitignore, Gemfile, Gemfile.lock]
+
+# Build Settings
+permalink: pretty
+remote_theme: joshgerdes/jekyll-uno
