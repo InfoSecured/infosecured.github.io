@@ -5,8 +5,6 @@ categories: [Password Cracking]
 tags: [Hashcat]
 ---
 
-### Weak Passwords
-
 Passwords are used every day in one way or another.  You create passwords to protect the information you hold dear such as your home and work computer, e-mail, and bank account.  But how much is your password protecting you?  As an ethical hacker, I can tell you that I have cracked ten character passwords in just minutes.  It’s very important for you to understand how to make a complex password and why it should be different for all of your accounts.
 
 To help you understand why complex passwords are important, lets take a quick look at the alphabet.  We all know that there are twenty-six letters in the alphabet.  But that’s just lowercase.  When we add uppercase, we have fifty-two characters.  With numbers, that’s another ten.  And with special characters, that 15+.  When you put them all together, you can make a very complex password.  But I bet your thinking, how can I remember a password with a mixture of these types of characters?  Well, there’s two ways.
