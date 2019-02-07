@@ -4,8 +4,8 @@
 jekyll build
 
 # remove old files
-rm -R ../other/infosecured.github.io/cv/*
+rm -R ../infosecured.github.io/about/*
 
 # re-add new
-cp _site/index.html ../other/infosecured.github.io/cv/.
-cp -R _site/media ../other/infosecured.github.io/cv/.
+cp _site/index.html ../infosecured.github.io/about/.
+cp -R _site/media ../infosecured.github.io/about/.
