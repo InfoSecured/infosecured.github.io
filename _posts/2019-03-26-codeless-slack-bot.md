@@ -85,7 +85,143 @@ For this Switch, you'll be creating several options.
 }
 ```
 
-Next, I created the request for data. The first action I'm creating will create a scan. For this action, we'll need to send an HTTP POST with the JSON payload. For this step, you'll need an API key and Secret key from Tenable IO. They can be entered into the X-ApiKeys object like this: `ApiKey=insertkeyhere; Secret=insertsecrethere`
+Next, I created the request for data. The first action I'm creating will create a scan. For this action, we'll need to send an HTTP POST with the JSON payload. For this step, you'll need an API key and Secret key from Tenable IO. They can be entered into the X-ApiKeys object like this: `ApiKey=insertkeyhere; Secret=insertsecrethere`. The Body field should contain the output of the JSON object you created in the previous step.
 
 ![](/images/posts/Step5.png "First POST")
 
+After creating the HTTP object, you'll need to parse the response from Tenable IO in order to get the Scan ID. Luckily, this is much easier than parsing `application/x-www-form-urlencoded`.  Create a new action and search for Parse Json. Choose that action and in the Content field, insert the Body of the previous HTTP request. In addition, you'll need a either a sample of that Body or the JSON schema. To get this, you can save and run your script. It will fail, but in doing so, you'll be able to get the response from the above Body object. I'm also including the schema so you can skip that step here. The field you're looking for is `id`.
+
+![](/images/posts/Step6.png "Parse JSON")
+
+```
+{
+    "type": "object",
+    "properties": {
+        "scan": {
+            "type": "object",
+            "properties": {
+                "container_id": {
+                    "type": "string"
+                },
+                "owner_uuid": {
+                    "type": "string"
+                },
+                "uuid": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "policy_id": {
+                    "type": "integer"
+                },
+                "scanner_id": {},
+                "scanner_uuid": {
+                    "type": "string"
+                },
+                "emails": {
+                    "type": "string"
+                },
+                "sms": {
+                    "type": "string"
+                },
+                "enabled": {
+                    "type": "boolean"
+                },
+                "dashboard_file": {},
+                "include_aggregate": {
+                    "type": "boolean"
+                },
+                "scan_time_window": {},
+                "custom_targets": {
+                    "type": "string"
+                },
+                "starttime": {},
+                "rrules": {
+                    "type": "string"
+                },
+                "timezone": {},
+                "notification_filters": {},
+                "tag_id": {
+                    "type": "integer"
+                },
+                "shared": {
+                    "type": "integer"
+                },
+                "user_permissions": {
+                    "type": "integer"
+                },
+                "default_permissions": {
+                    "type": "integer"
+                },
+                "owner": {
+                    "type": "string"
+                },
+                "owner_id": {
+                    "type": "integer"
+                },
+                "last_modification_date": {
+                    "type": "integer"
+                },
+                "creation_date": {
+                    "type": "integer"
+                },
+                "type": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "integer"
+                }
+            }
+        }
+    }
+}
+```
+
+Once you've parsed the JSON and extracted the `id`, you can simply launch the scan with another HTTP request. You'll need the same authentication data from the previous steps.
+
+![](/images/posts/Step7.png "Launch Scan")
+
+In the next step, you'll determine if the scan started successfully. This can be done by creating a Condition action and checking that the Status from the previous HTTP POST equals 200. Then, you'll create some variables with the text of your choosing to insert into the JSON body for the Slack response.
+
+![](/images/posts/Step8.png "Launch Condition")
+
+Next, you'll create the Slack response in JSON format. Below is an example of mine, but it can be as simple as a single text key.
+
+![](/images/posts/Step9.png "Slack JSON")
+
+```
+{
+  "attachments": [
+    {
+      "fallback": "Please visit the Tenable console to view results at this time.",
+      "color": @{variables('SlackColor')},
+      "pretext": "",
+      "author_name": @{variables('SlackAuthor')},
+      "author_link": "",
+      "author_icon": "",
+      "title": @{variables('SlackTitle')},
+      "title_link": "https://cloud.tenable.com",
+      "text": "",
+      "fields": [
+        {
+          "title": @{variables('SlackText')},
+          "value": "",
+          "short": false
+        }
+      ],
+      "image_url": "",
+      "thumb_url": "",
+      "footer": "",
+      "footer_icon": "https://platform.slack-edge.com/img/default_application_icon.png"
+    }
+  ]
+}
+```
+
+Finally, you'll create the HTTP POST to send your response to Slack. The URI for the Slack Response should be the first item you parsed and the Body should be the JSON you just created.
+
+![](/images/posts/Step10.png "Slack Response")
