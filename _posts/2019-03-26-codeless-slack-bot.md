@@ -1,11 +1,11 @@
 ---
-title: "Code-less Slack Bot"
+title: "Start a Tenable Scan with a Code-less Slack Bot"
 date:   2019-02-18 22:58:00
 categories: [Automation]
 tags: [Automation, Slack]
 ---
 
-I recently came across the need to quickly access some Tenable Security Center data from my mobile device, which if you've ever attempted it, know that it isn't mobile browser friendly. So I thought to mysef, sure, I could write a python script and run it in pythonista, but then I would still need to log onto a VPN before I ran it and I also want to make this usable for others. Then I remembered that I could use Microsoft Flow to help facilitate this and the great part is that it would require minimal to no code.
+I recently came across the need to quickly access some Tenable data from my mobile device, which if you've ever attempted it, know that it isn't mobile browser friendly. So I thought to myself, sure, I could write a python script and run it in pythonista, but then I would still need to log onto a VPN before I ran it and I also want to make this usable for others. Then I remembered that I could use Microsoft Flow to help facilitate this and the great part is that it would require minimal to no code.
 
 Using Microsoft Flow, I began by setting up a Request trigger. I then named and saved my flow so it could generate a URL. I then created a response object because Slack needs a response within 3000ms. Don't worry, you'll be able to respond in Slack again.
 
