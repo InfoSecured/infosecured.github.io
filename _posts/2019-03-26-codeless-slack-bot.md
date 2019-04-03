@@ -39,13 +39,7 @@ I performed the same steps on the action and any options as well.
 
 Once all of the body is parsed, I set each item to a variable. 
 
-At this point, there are several paths we can take. In this post, I'll explain the following:
-
- * Start a scan in Tenable IO
- * Get the last scan for a specific IP Address
- * Get a list of currently running scans
-
-To be able to choose from these options, you'll create a variable called ResponseType and use the same parsing technique above to set the variable. This variable can be passed in from Slack.  Then a Switch should be created to choose which ResponseType you parsed.
+At this point, there are several paths we can take. In this post, I'll explain how to start a scan in Tenable IO but by passing in your intention into a variable, you can use the same parsing technique above to make more options available. Then a Switch can be created to choose which option you parsed.
 
 ![](/images/posts/Switch.png "Switch")
 
@@ -225,3 +219,5 @@ Next, you'll create the Slack response in JSON format. Below is an example of mi
 Finally, you'll create the HTTP POST to send your response to Slack. The URI for the Slack Response should be the first item you parsed and the Body should be the JSON you just created.
 
 ![](/images/posts/Step10.png "Slack Response")
+
+I hope this post has been helpful. Feel free to reach out with any questions or comments.
