@@ -7,9 +7,13 @@ tags: [Automation, Slack]
 
 I recently came across the need to quickly access some Tenable Security Center data from my mobile device, which if you've ever attempted it, know that it isn't mobile browser friendly. So I thought to mysef, sure, I could write a python script and run it in pythonista, but then I would still need to log onto a VPN before I ran it and I also want to make this usable for others. Then I remembered that I could use Microsoft Flow to help facilitate this and the great part is that it would require minimal to no code.
 
-Using Microsoft Flow, I began by setting up a Request trigger. I then named and saved my flow so it could generate a URL. Next, I logged into Slack and created a new app with a slash command. I pasted the URL I previously received into the Slack app as the webhook address and defined a command `/tenable [-action] [option]`.
+Using Microsoft Flow, I began by setting up a Request trigger. I then named and saved my flow so it could generate a URL. I then created a response object because Slack needs a response within 3000ms. Don't worry, you'll be able to respond in Slack again.
 
-Back in Flow, I created a response object because Slack needs a response within 3000ms. Don't worry, you'll be able to respond in Slack again. Next, I can start building the flow. When you send a slash command with Slack, the Content-Type is `application/x-www-form-urlencoded`. In Flow, this is a slight issue because there is no parser for this type of content. I initialized a new variable and set it to the body of the initial request as a string. This leads us to the most complicated section of the flow.
+![](/images/posts/Step1.png "Request")
+
+Next, I logged into Slack and created a new app with a slash command. I pasted the URL I previously received into the Slack app as the webhook address and defined a command `/tenable [-action] [option]`.
+
+I can now start building the rest of the flow. When you send a slash command with Slack, the Content-Type is `application/x-www-form-urlencoded`. In Flow, this is a slight issue because there is no parser for this type of content. I initialized a new variable and set it to the body of the initial request as a string. This leads us to the most complicated section of the flow.
 
 There are a couple of things we need from the body; the response URL, the action and if you have an option, you'll need that too. In order to parse the data, each of these items will need four compose objects. If you take a look at [this link](https://api.slack.com/slash-commands#app_command_handling), you can see a sample payload from the slash command. 
 
