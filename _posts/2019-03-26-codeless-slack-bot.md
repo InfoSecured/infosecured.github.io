@@ -1,6 +1,6 @@
 ---
 title: "Start a Tenable Scan with a Code-less Slack Bot"
-date:   2019-02-18 22:58:00
+date:   2019-04-02 21:55:00
 categories: [Automation]
 tags: [Automation, Slack]
 ---
